@@ -44,5 +44,5 @@ function cargarContenido(archivo) {
 }
 
 // Ejemplo de carga de contenido desde un archivo llamado "contenido1.html"
-cargarContenido('contenido.html');
+cargarContenido('contenido2.html');
 console.log(`Calificación sel `);

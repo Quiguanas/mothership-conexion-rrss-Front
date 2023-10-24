@@ -20,3 +20,13 @@ function openFacebookLoginPopup() {
         'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top
     );
 }
+
+const ratingInputs = document.querySelectorAll('.rate input');
+const pageTitle = document.title;
+
+ratingInputs.forEach(input => {
+    input.addEventListener('change', (event) => {
+        const selectedRating = event.target.value;
+        console.log(`Calificación seleccionada: ${selectedRating} ${pageTitle} `);
+    });
+});

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contenido 1</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="steps">
@@ -42,15 +43,18 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/mrHqjjKzZP8&ab_" frameborder="0" allowfullscreen></iframe>
 
         </div>
-        <div class="dropdown">
-            <button class="button-share">Compartir</button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">YouTube</a></li>
-            </ul>
+        <div class="dropdowns">
+            <button class="button-share" id="boton-compartir">Compartir</button>
+            <div class="dropdown-menu" id="lista-desplegable">
+                <ul>
+                    <li><a href="#" onclick="window.parent.cargarContenido('facebook.html')">Facebook</a></li>
+                    <li><a href="#" onclick="window.parent.cargarContenido('instagram.html')">Instagram</a></li>
+                    <li><a href="#" onclick="window.parent.cargarContenido('youtube.html')">YouTube</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
+<script src="js/scriptcontenido.js"></script>
 </body>
 </html>

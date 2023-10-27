@@ -1,3 +1,14 @@
+
+.content {
+    display: flex;
+    top: 10%;
+    left: 1%;
+    right: 1%;
+    bottom: 40px;
+    width: 100%;
+    height: 80%; /* Deja espacio para los botones */
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -193,5 +204,3 @@ body {
 .fb-login-button {
     cursor: pointer;
 }
-
-

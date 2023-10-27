@@ -33,16 +33,16 @@ ratingInputs.forEach(input => {
 
 
 function cargarContenido(archivo) {
-    fetch(archivo)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error al cargar el archivo:', error);
-        });
+    var iframe = document.getElementById('content');
+            iframe.src = archivo;
 }
 
 // Ejemplo de carga de contenido desde un archivo llamado "contenido1.html"
 cargarContenido('contenido.html');
 console.log(`Calificación sel `);
+
+
+
+
+
+

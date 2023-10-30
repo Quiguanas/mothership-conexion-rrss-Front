@@ -89,20 +89,21 @@ max-width: 100%;
     <div class="containerbody">
     <div class="container">
         <div class="logored">
-            <h1 for="titulo">Felicidades compartiste tu video en:</h1>
+            <h1 for="titulo">Felicidades compartiste tu<br>video en:</h1>
         </div>
         <div class="contenedor">
             <img src="img/facebook.png" alt="Instagram Logo">
-            <img src="img/felicidades.png" alt="Instagram Logo">
+            <img src="img/congrats.png" alt="Instagram Logo">
         </div>
     </div>
 </div>
     <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // Aquí puedes agregar la lógica para manejar el envío del formulario (por ejemplo, enviar datos a un servidor).
-    console.log("Formulario enviado.");
-});
+ console.log("antes de la carga")        
+function cargarcalificacion(){
+  console.log("carga la funcion")  
+  window.parent.cargarContenido('calificacionfacebook.html')
+}
+setTimeout(cargarcalificacion, 3000);
 
     </script>
 </body>

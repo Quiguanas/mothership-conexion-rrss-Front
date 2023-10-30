@@ -87,17 +87,17 @@ button:hover {
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Ingresar</button>
+            <button type="submit" onclick="window.parent.cargarContenido('confirmacioncompartirvideoyoutube.html')">Ingresar</button>
             <p class="forgot-password"><a href="#">¿Olvidaste tu contraseña?</a></p>
         </form>
     </div>
 </div>
     <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+        //document.getElementById("login-form").addEventListener("submit", function(event) {
+    //event.preventDefault();
     // Aquí puedes agregar la lógica para manejar el envío del formulario (por ejemplo, enviar datos a un servidor).
-    console.log("Formulario enviado.");
-});
+    //console.log("Formulario enviado.");
+//});
 
     </script>
 </body>

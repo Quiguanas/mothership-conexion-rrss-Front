@@ -1,282 +1,225 @@
-
-.content {
-    display: flex;
-    top: 10%;
-    left: 1%;
-    right: 1%;
-    bottom: 40px;
-    width: 100%;
-    height: 80%; /* Deja espacio para los botones */
-}
-
 body {
-    font-family: Arial, sans-serif;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #636363;
-    background: #FAF9F9;
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
-.menu {
-    display: flex;
-}
-
-.menu-item {
-    margin: 0 10px;
-}
-
-.steps {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px;
-    background: #FAF9F9;
-    border-top: 1px solid rgb(99, 99, 99);
-    position: relative; /* Para posicionar las líneas correctamente */
-}
-
-.step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; /* Para posicionar las líneas correctamente */
-}
-.step-text {
-    margin-top: 10px;
-}
-.step-circle {
-    width: 30px;
-    height: 30px;
-    background-color: green;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    margin-right: 10px; /* Espacio entre el círculo y el texto */
-}
-
- /* Estilos para el contenedor de los botones y el video */
- .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-}
-
-/* Estilos para el video */
-.video {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px; /* Espaciado entre el video y el interruptor */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-/* Estilos para el pie de página */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgb(118, 118, 118);
-    padding: 10px;
-}
-
-/* Estilos para los iconos de redes sociales */
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px;
-}
-
-.buttons {
-    display: flex;
-    align-items: center;
-}
-
-.button {
-    background-color: #09244B;
-    color: white;
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.video {
-    width: 560px;
-    height: 315px;
-    margin: 0 auto;
-}
-
-.share-button {
-    background-color: #dadada;
-    color: rgb(255, 103, 237);
-    border: 2px solid rgb(255, 103, 237); /* Fucsia */
-    border-radius: 20px; /* Bordes redondos */
-    cursor: pointer;
-    padding: 10px 20px;
-}
-
-.share-options {
-    display: none;
-    position: absolute;
-    background-color: white;
-    padding: 10px;
-}
-
-.share-option {
-    margin-bottom: 10px;
-}
-.button-share {
-    border: 2px solid #ff00ff; /* Fucsia */
-    border-radius: 20px; /* Bordes redondos */
-    background-color: transparent; /* Fondo transparente para que el borde sea visible */
-    color: #ff00ff; /* Color del texto igual al color del borde */
-    padding: 10px 20px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor al pasar el ratón sobre el botón */
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 1;
-    align-items: center;
-}
-
-.dropdown-menu img {
-    width: 20px;
-    height: 20px;
-    margin-left: 1px;
-}
-
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    list-style: none;
     margin: 0;
     padding: 0;
-}
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
 
-.dropdown-menu li a {
-    text-decoration: none;
-    color: #333;
+  }
+  
+  header {
     display: flex;
-    padding: 8px 12px;
+    justify-content: space-between;
     align-items: center;
-}
+    padding: 10px 20px;
+    background-color: #ffffff;
+  }
+  
+  .logo {
+    /* Estilos para el logo */
+  }
+  
+  .menu {
+    display: flex;
+    /* Otros estilos si es necesario */
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 10px; /* Ajusta según tus necesidades de espaciado */
+    width: 100px; /* Ajusta según tus necesidades de ancho */
+  }
+  
+  
+  .separator {
+    border: 1px solid #7f7f7f;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background: rgb(243, 243, 243);
+  }
+  
+  .video-container {
+    /* Estilos para el contenedor de video */
+    border-radius: 8px; /* Ajusta según tus necesidades de redondeo de bordes */
+  }
+  
+  .video-description-card {
+    background: #ddd; /* Color de fondo gris */
+    padding: 20px; /* Ajusta según tus necesidades de espaciado */
+    margin-top: 20px; /* Ajusta según tus necesidades de espaciado */
+  }
+  
+  .video-description {
+    /* Estilos para la descripción del video dentro de la tarjeta gris */
+  }
+  
+  
+  /* Otros estilos para el resto de tus elementos */
+  
+  
+  .card {
+    background: #CC00FF30;
+    width: 349px;
+    height: 83px;
+    top: 386px !important;
+    left: 652px;
+    border-radius: 10px;
+    /* Otros estilos si es necesario */
+  }
+  
+  /* Ajusta los estilos para los elementos hijos según sea necesario */
+  .share-button {
+    background: #5D00B9;
+    width: 163px;
+    height: 36px;
+    padding: 6px 24px;
+    border-radius: 4px;
+    gap: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ajusta estilos para las redes sociales según sea necesario */
+  .social-icons img {
+    /* Estilos para las imágenes de redes sociales */
+  }
+  
+  .social-icons {
+    /* Estilos para los iconos de redes sociales */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-text {
+    /* Estilos para el texto del pie de página */
+  }
+  .additional-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .additional-image img {
+    display: block; /* Evita el espacio adicional debajo de la imagen */
+    margin: 0 auto; /* Centra horizontalmente */
+  }
 
-.dropdown-menu li a:hover {
-    background-color: #f2f2f2;
-}
 
-body {
+  .share-container {
+    text-align: center; /* Centra los elementos horizontalmente */
+  }
+  
+
+  .social-icons img {
+    width: 40px; /* Ajusta según tus necesidades de tamaño */
+    height: 40px; /* Ajusta según tus necesidades de tamaño */
+    margin: 0 5px; /* Ajusta según tus necesidades de espaciado */
+    border-radius: 50%; /* Hace que las imágenes sean circulares */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5); /* Agrega una sombra amarilla */
+  }
+  
+  .card {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
+    
+  }
+  .video-container {
+    width: 325px;
+    height: 431px;
+    top: 185px;
+    left: 141px;
+    border-radius: 7.84px;
+    border: 2.94px solid #5D00B9;
+    overflow: hidden; /* Asegura que el contenido no sobresalga de los bordes redondeados */
+  }
+  
+  .video-description-card {
+    background: #ddd; /* Puedes ajustar el color de fondo según tus necesidades */
+    padding: 20px; /* Ajusta según tus necesidades de espaciado */
+    border-radius: 7.84px;
+  }
+  
+  .video-description {
+    /* Estilos para la descripción del video dentro de la tarjeta gris */
+  }
+  
+  /* Otros estilos para el resto de tus elementos */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .popup span.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .popup #loginContent {
     text-align: center;
-}
-
-.fb-login-button {
-    cursor: pointer;
-}
-
-.switch-container {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
   }
   
-  .switch-label {
-    margin-left: 10px; /* Mueve el label a la derecha del switch */
-  }
-  
-  /* Estilos para el switch */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+  .card img {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
     border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    cursor: pointer;
+  }
+
+   /* Estilos generales para las alertas */
+   .alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+    z-index: 1000;
+  }
+
+  /* Estilos para alerta de éxito */
+  .alert-success {
+    background-color: #10C200; /* Verde */
+  }
+
+  /* Estilos para alerta de error */
+  .alert-error {
+    background-color: #CC00FF; /* Rojo */
   }
   
-  input:checked + .slider {
-    background-color: #5D00B9;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #5D00B9;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }

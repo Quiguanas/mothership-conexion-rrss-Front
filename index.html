@@ -1,45 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mothership</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Tu Aplicación</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img src="img/mothership.png" style="margin-top: 30px;" alt="Logo">
-        </div>
-        <div class="menu">
-            <div class="menu-item"><a id="inicio" href="#" onclick="window.parent.cargarContenido('contenido.html')">Inicio</a></div>
-            <div class="menu-item">Contacto</div>
-            <div class="menu-item">Iniciar Sesión</div>
-        </div>
+  <header>
+    <img src="img/logo.png"></img>
+    <div class="menu">
+      <ul>
+        <li>Inicio</li>
+        <li>Contacto</li>
+        <li>Cerrar Sesión</li>
+      </ul>
     </div>
+  </header>
+  <hr class="separator">
+  <div class="additional-image">
+    <img src="img/check.png" alt="Otra Imagen">
+  </div>
+  <main>
+    <div class="video-container">
+        <!-- Embed de YouTube -->
+        
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_zq1Xqf-zMA" title="Segunda Iteración InTech MOM 2023-2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      
+   
+    <div >
+      <button class="share-button">COMPARTIR</button>
+      <br>
+      <div class="social-icons card">
+        <img src="img/Facebooklogo.png" alt="Facebook" onclick="loginWithFacebook()">
+        <img src="img/instagramlogo.png" alt="Instagram" onclick="loginWithInstagram()">
+        <img src="img/youtubelogo.png" alt="YouTube" onclick="loginWithYouTube()">
+      </div>
+      
+      <div id="loginPopup" class="popup">
+        <span class="close" onclick="closeLoginPopup()">&times;</span>
+        <div id="loginContent">
+          <!-- Contenido del inicio de sesión, como formularios de inicio de sesión de red social -->
+          Inicio de sesión con <span id="socialNetworkName"></span>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  <div id="alerts-container"></div>
 
-    <div class="separator"></div>
+  <!-- Ejemplo de botón que desencadena una alerta de éxito -->
+  <button onclick="showSuccessAlert()">Mostrar Alerta de Éxito</button>
 
-    <!-- Contenido del cuerpo -->
-    <!--<div class="content" id="content"></div>-->
-    <iframe class="content" id="content" frameborder="0"></iframe>
-
-
-
- <!-- Línea separadora negra -->
- <div class="separator" style="border-top: 2px solid rgb(93, 93, 93);"></div>
-
- <!-- Pie de página -->
- <div class="footer">
-     <!-- Texto a la izquierda -->
-     <div>2023 Mothership </div>
-     <!-- Iconos de redes sociales a la derecha -->
-     <div class="social-icons">
-         <img src="img/youtube.png" alt="YouTube">
-         <img src="img/linkedin.png" alt="Instagram">
-         <img src="img/Email.png" alt="Facebook">
-     </div>
- </div>
+  <!-- Ejemplo de botón que desencadena una alerta de error -->
+  <button onclick="showErrorAlert()">Mostrar Alerta de Error</button>
+  
+  <footer>
+    <hr class="separator">
+    <div class="footer-text">
+      <p>2023 Mothership</p>
+    </div>
+  </footer>
+  <!-- Agrega el SDK de Facebook al final del body en tu HTML -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=TU_APP_ID&autoLogAppEvents=1" nonce="qyek7cX6"></script>
+  <script src="js/main.js"></script>
+  
 </body>
 </html>
-<script src="js/script.js"></script>

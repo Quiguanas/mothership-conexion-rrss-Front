@@ -9,6 +9,10 @@ body {
     text-align: center;
 
   }
+
+  body {
+    font-family: Arial, sans-serif;
+}
   
   header {
     display: flex;
@@ -47,6 +51,21 @@ body {
     justify-content: space-between;
     padding: 50px;
     background: rgb(243, 243, 243);
+  }
+
+  .left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .video-container {
@@ -126,18 +145,9 @@ body {
     text-align: center; /* Centra los elementos horizontalmente */
   }
   
-
-  .social-icons img {
-    width: 40px; /* Ajusta según tus necesidades de tamaño */
-    height: 40px; /* Ajusta según tus necesidades de tamaño */
-    margin: 0 5px; /* Ajusta según tus necesidades de espaciado */
-    border-radius: 50%; /* Hace que las imágenes sean circulares */
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5); /* Agrega una sombra amarilla */
-  }
-  
   .card {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     
   }
@@ -188,15 +198,6 @@ body {
   .popup #loginContent {
     text-align: center;
   }
-  
-  .card img {
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
-    cursor: pointer;
-  }
 
    /* Estilos generales para las alertas */
    .alert {
@@ -223,3 +224,146 @@ body {
     background-color: #CC00FF; /* Rojo */
   }
   
+
+  .social-icons img {
+    width: 40px; /* Ajusta según tus necesidades de tamaño */
+    height: 40px; /* Ajusta según tus necesidades de tamaño */
+    margin: 0 5px; /* Ajusta según tus necesidades de espaciado */
+    position: relative; /* Posición relativa para los elementos secundarios */
+    cursor: pointer;
+  }
+
+  .social-icons img::after {
+    content: attr(data-text); /* Utiliza el contenido del atributo data-text como texto */
+    display: block; /* Hace que el texto sea un bloque separado */
+    text-align: center; /* Centra el texto */
+    margin-top: 5px; /* Ajusta según tus necesidades de espaciado */
+    font-size: 12px; /* Ajusta según tus necesidades de tamaño de fuente */
+    color: #ffffff; /* Color del texto */
+  }
+
+
+  .social-icons .social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons .icon-text {
+    font-size: 10px; /* Ajusta según tus necesidades de tamaño de fuente */
+    color: #000; /* Color del texto */
+    margin-top: 5px; /* Ajusta según tus necesidades de espaciado */
+    line-height: 22.4px;
+    font-weight: bold;
+  }
+
+
+  .popupcompartir {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F2F2F2;
+    width: 369px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 1px #CC00FF; /* Agrega la sombra con blur de 4px y color #CC00FF */
+    z-index: 1000;
+  }
+  
+  .popupcompartir-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .popupcompartir-buttons button {
+    background-color: #5D00B9;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .popupcompartir-buttons button:hover {
+    background-color: #4D0089;
+  }
+  
+  .popupcompartir p {
+    margin-bottom: 20px;
+  }
+  
+  .popupcompartir span.closecompartir {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .popupcompartir-buttons {
+    margin-top: 20px;
+  }
+
+  .popupcompartir-buttons button.cancel {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000; /* Borde negro */
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+  .popup.compartirexito {
+    background-color: #F2F2F2;
+    width: 369px;
+    height: 143px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 1px #CC00FF; 
+  }
+  
+  .popup.compartirexito .popup-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .popup.compartirexito p {
+    margin-bottom: 20px;
+  }
+  
+  .popup.compartirexito .vistobueno {
+    width: 50px; /* Ajusta según tus necesidades */
+    height: 50px; /* Ajusta según tus necesidades */
+    margin-top: 10px;
+  }
+
+  .popup.popuperror {
+    background-color: #F2F2F2;
+    width: 369px;
+    height: auto; /* Ajustado a 'auto' para acomodar el contenido variable */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 1px #CC00FF; 
+  }
+  
+  .popup.popuperror .popup-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .popup.popuperror p {
+    margin-bottom: 10px;
+  }
+  
+  .popup.popuperror p.error-message {
+    color: #09244B80;
+    text-align: center;
+  }

@@ -85,3 +85,39 @@ function showSuccessAlert() {
       alertElement.style.display = 'none';
     }, 3000);
   }
+
+
+  // Agrega este código a tu archivo main.js
+  function openPopupCompartir() {
+    document.getElementById('popupcompartir').style.display = 'block';
+  }
+  
+  function closePopupCompartir() {
+    document.getElementById('popupcompartir').style.display = 'none';
+  }
+  function acceptAction() {
+    // Lógica cuando se hace clic en "Aceptar"
+    alert('Compartiendo el video...');
+    closePopupCompartir();
+  }
+  
+  function cancelAction() {
+    // Lógica cuando se hace clic en "Cancelar"
+    closePopupCompartir();
+  }
+
+  function openPopupCompartirExito() {
+    document.getElementById('compartirexito').style.display = 'block';
+  }
+  
+  function closePopupCompartirExito() {
+    document.getElementById('compartirexito').style.display = 'none';
+  }
+
+  function openPopupError() {
+    document.getElementById('popuperror').style.display = 'block';
+  }
+  
+  function closePopupError() {
+    document.getElementById('popuperror').style.display = 'none';
+  }

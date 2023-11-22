@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Tu Aplicación</title>
 </head>
+
 <body>
   <header>
     <img src="img/logo.png"></img>
@@ -22,49 +24,91 @@
     <img src="img/check.png" alt="Otra Imagen">
   </div>
   <main>
-    <div class="video-container">
+    <div class="left-section">
+      <div class="video-container">
         <!-- Embed de YouTube -->
-        
         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_zq1Xqf-zMA" title="Segunda Iteración InTech MOM 2023-2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      
-   
-    <div >
-      <button class="share-button">COMPARTIR</button>
+    </div>
+    <div class="right-section">
+      <button class="share-button" onclick="openPopup()">COMPARTIR</button>
       <br>
       <div class="social-icons card">
-        <img src="img/Facebooklogo.png" alt="Facebook" onclick="loginWithFacebook()">
-        <img src="img/instagramlogo.png" alt="Instagram" onclick="loginWithInstagram()">
-        <img src="img/youtubelogo.png" alt="YouTube" onclick="loginWithYouTube()">
-      </div>
-      
-      <div id="loginPopup" class="popup">
-        <span class="close" onclick="closeLoginPopup()">&times;</span>
-        <div id="loginContent">
-          <!-- Contenido del inicio de sesión, como formularios de inicio de sesión de red social -->
-          Inicio de sesión con <span id="socialNetworkName"></span>
+        <div class="social-icon" onclick="openPopupCompartir()">
+          <img src="img/instagram.svg" alt="Instagram">
+          <span class="icon-text">Instagram</span>
+        </div>
+
+        <div class="social-icon" onclick="openPopupCompartir()">
+          <img src="img/facebook.svg" alt="Facebook">
+          <span class="icon-text">Facebook</span>
+        </div>
+        
+        <div class="social-icon" onclick="openPopupCompartir()">
+          <img src="img/youtube.svg" alt="YouTube">
+          <span class="icon-text">YouTube</span>
         </div>
       </div>
-      
     </div>
   </main>
   <div id="alerts-container"></div>
 
   <!-- Ejemplo de botón que desencadena una alerta de éxito -->
-  <button onclick="showSuccessAlert()">Mostrar Alerta de Éxito</button>
+  <button onclick="openPopupCompartirExito()">Mostrar Alerta de Éxito</button>
 
   <!-- Ejemplo de botón que desencadena una alerta de error -->
-  <button onclick="showErrorAlert()">Mostrar Alerta de Error</button>
-  
+  <button onclick="openPopupError()">Mostrar Alerta de Error</button>
+
   <footer>
     <hr class="separator">
     <div class="footer-text">
       <p>2023 Mothership</p>
     </div>
   </footer>
+
+  <div id="loginPopup" class="popup">
+    <span class="close" onclick="closeLoginPopup()">&times;</span>
+    <div id="loginContent">
+      <!-- Contenido del inicio de sesión, como formularios de inicio de sesión de red social -->
+      Inicio de sesión con <span id="socialNetworkName"></span>
+    </div>
+  </div>
+
+  <div id="popupcompartir" class="popupcompartir">
+    <div class="popupcompartir-content">
+      <span class="closecompartir" onclick="closePopupCompartir()">&times;</span>
+      <p>¿Seguro que quieres compartir este video?</p>
+      <div class="popupcompartir-buttons">
+        <button onclick="acceptAction()">Aceptar</button>
+        <button onclick="cancelAction()" class="cancel">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="compartirexito" class="popup compartirexito">
+    <div class="popup-content">
+      <span class="close" onclick="closePopupCompartirExito()">&times;</span>
+      <p>¡El video ha sido compartido con éxito!</p>
+      <img src="img/check.svg" alt="Visto Bueno" class="vistobueno">
+    </div>
+  </div>
+
+  <div id="popuperror" class="popup popuperror">
+    <div class="popup-content">
+      <span class="close" onclick="closePopupError()">&times;</span>
+      <p>Mensaje: ¡Tenemos un problema!</p>
+      <p style="color: #09244B80; text-align: center;">Se ha producido un error durante el intento de compartir el
+        video. Le solicitamos amablemente que vuelva a intentarlo más tarde.</p>
+    </div>
+  </div>
+
+
   <!-- Agrega el SDK de Facebook al final del body en tu HTML -->
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=TU_APP_ID&autoLogAppEvents=1" nonce="qyek7cX6"></script>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0&appId=TU_APP_ID&autoLogAppEvents=1"
+    nonce="qyek7cX6"></script>
   <script src="js/main.js"></script>
-  
+
 </body>
+
 </html>

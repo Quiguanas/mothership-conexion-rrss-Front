@@ -177,13 +177,17 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
+    height: auto;
     transform: translate(-50%, -50%);
     background-color: #fefefe;
     padding: 20px;
     border: 1px solid #888;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
     z-index: 1;
   }
+  
   
   .popup span.close {
     position: absolute;
@@ -258,20 +262,7 @@ body {
   }
 
 
-  .popupcompartir {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #F2F2F2;
-    width: 369px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 1px #CC00FF; /* Agrega la sombra con blur de 4px y color #CC00FF */
-    z-index: 1000;
-  }
+
   
   .popupcompartir-content {
     padding: 20px;
@@ -323,11 +314,12 @@ body {
 
   .popup.compartirexito {
     background-color: #F2F2F2;
-    width: 369px;
-    height: 143px;
+    width: auto;
+    height: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 1px #CC00FF; 
+    /*box-shadow: 0 0 1px #CC00FF; */
+    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
   }
   
   .popup.compartirexito .popup-content {
@@ -351,7 +343,8 @@ body {
     height: auto; /* Ajustado a 'auto' para acomodar el contenido variable */
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 1px #CC00FF; 
+    /* box-shadow: 0 0 1px #CC00FF; */
+    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
   }
   
   .popup.popuperror .popup-content {
@@ -366,4 +359,20 @@ body {
   .popup.popuperror p.error-message {
     color: #09244B80;
     text-align: center;
+  }
+
+  .popupcompartir {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    background-color: #F2F2F2;
+    width: auto;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1); /* Agrega la sombra con blur de 4px y color #CC00FF */
+    z-index: 1000;
   }

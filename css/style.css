@@ -1,378 +1,415 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Lato;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-
-  }
-
-  body {
-    font-family: Arial, sans-serif;
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #ffffff;
-  }
-  
-  .logo {
-    /* Estilos para el logo */
-  }
-  
-  .menu {
-    display: flex;
-    /* Otros estilos si es necesario */
-  }
-  
-  .menu ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  .menu li {
-    margin-right: 10px; /* Ajusta según tus necesidades de espaciado */
-    width: 100px; /* Ajusta según tus necesidades de ancho */
-  }
-  
-  
-  .separator {
-    border: 1px solid #7f7f7f;
-  }
-  
-  main {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    background: rgb(243, 243, 243);
-  }
 
-  .left-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .video-container {
-    /* Estilos para el contenedor de video */
-    border-radius: 8px; /* Ajusta según tus necesidades de redondeo de bordes */
-  }
-  
-  .video-description-card {
-    background: #ddd; /* Color de fondo gris */
-    padding: 20px; /* Ajusta según tus necesidades de espaciado */
-    margin-top: 20px; /* Ajusta según tus necesidades de espaciado */
-  }
-  
-  .video-description {
-    /* Estilos para la descripción del video dentro de la tarjeta gris */
-  }
-  
-  
-  /* Otros estilos para el resto de tus elementos */
-  
-  
-  .card {
-    background: #CC00FF30;
-    width: 349px;
-    height: 83px;
-    top: 386px !important;
-    left: 652px;
-    border-radius: 10px;
-    /* Otros estilos si es necesario */
-  }
-  
-  /* Ajusta los estilos para los elementos hijos según sea necesario */
-  .share-button {
-    background: #5D00B9;
-    width: 163px;
-    height: 36px;
-    padding: 6px 24px;
-    border-radius: 4px;
-    gap: 12px;
-    color: #ffffff;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Ajusta estilos para las redes sociales según sea necesario */
-  .social-icons img {
-    /* Estilos para las imágenes de redes sociales */
-  }
-  
-  .social-icons {
-    /* Estilos para los iconos de redes sociales */
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .footer-text {
-    /* Estilos para el texto del pie de página */
-  }
-  .additional-image {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .additional-image img {
-    display: block; /* Evita el espacio adicional debajo de la imagen */
-    margin: 0 auto; /* Centra horizontalmente */
-  }
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 3.75rem;
+  padding: 0 50px;
+  border-bottom: 1px solid #09244B;
+}
+
+.logo img {
+  max-width: 14.875rem;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  padding-left: 50px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #09244B;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.35rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgb(243, 243, 243);
+  box-sizing: border-box;
+  min-height: calc(100vh - 3.8rem - 3.8rem - 3.9rem);
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Estilos para el contenedor de video */
+.video-container {
+  border-radius: 8px;
+  /* Ajusta según tus necesidades de redondeo de bordes */
+}
+
+/* Estilos para la tarjeta de descripción del video */
+.video-description-card {
+  background: #ddd;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.video-description {
+  /* Estilos para la descripción del video dentro de la tarjeta gris */
+}
+
+/* Otros estilos para el resto de tus elementos */
+.right-section p{
+  padding-bottom: 10px;
+  font-weight: bold; 
+}
+
+.card {
+  background: #CC00FF30;
+  width: 349px;
+  height: 83px;
+  top: 386px !important;
+  left: 652px;
+  border-radius: 10px;
+  /* Otros estilos si es necesario */
+}
 
 
-  .share-container {
-    text-align: center; /* Centra los elementos horizontalmente */
-  }
-  
-  .card {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-  }
-  .video-container {
-    width: 325px;
-    height: 431px;
-    top: 185px;
-    left: 141px;
-    border-radius: 7.84px;
-    border: 2.94px solid #5D00B9;
-    overflow: hidden; /* Asegura que el contenido no sobresalga de los bordes redondeados */
-  }
-  
-  .video-description-card {
-    background: #ddd; /* Puedes ajustar el color de fondo según tus necesidades */
-    padding: 20px; /* Ajusta según tus necesidades de espaciado */
-    border-radius: 7.84px;
-  }
-  
-  .video-description {
-    /* Estilos para la descripción del video dentro de la tarjeta gris */
-  }
-  
-  /* Otros estilos para el resto de tus elementos */
-  .popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    height: auto;
-    transform: translate(-50%, -50%);
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    font-weight: bold;
-    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
-    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
-    z-index: 1;
-  }
-  
-  
-  .popup span.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #888;
-    cursor: pointer;
-  }
-  
-  .popup #loginContent {
-    text-align: center;
-  }
+/* Ajusta estilos para las redes sociales según sea necesario */
+.social-icons img {
+  /* Estilos para las imágenes de redes sociales */
+}
 
-   /* Estilos generales para las alertas */
-   .alert {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    display: none;
-    z-index: 1000;
-  }
+.social-icons {
+  /* Estilos para los iconos de redes sociales */
+}
+.additional-image {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  /* Estilos para alerta de éxito */
-  .alert-success {
-    background-color: #10C200; /* Verde */
-  }
+.additional-image img {
+  width: 37.18rem;
+  height: 3.25rem;
+}
 
-  /* Estilos para alerta de error */
-  .alert-error {
-    background-color: #CC00FF; /* Rojo */
-  }
-  
+.share-container {
+  text-align: center;
+  /* Centra los elementos horizontalmente */
+}
 
-  .social-icons img {
-    width: 40px; /* Ajusta según tus necesidades de tamaño */
-    height: 40px; /* Ajusta según tus necesidades de tamaño */
-    margin: 0 5px; /* Ajusta según tus necesidades de espaciado */
-    position: relative; /* Posición relativa para los elementos secundarios */
-    cursor: pointer;
-  }
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-  .social-icons img::after {
-    content: attr(data-text); /* Utiliza el contenido del atributo data-text como texto */
-    display: block; /* Hace que el texto sea un bloque separado */
-    text-align: center; /* Centra el texto */
-    margin-top: 5px; /* Ajusta según tus necesidades de espaciado */
-    font-size: 12px; /* Ajusta según tus necesidades de tamaño de fuente */
-    color: #ffffff; /* Color del texto */
-  }
+}
+
+.video-container {
+  width: 250px;
+  height: 325px;
+  top: 100px;
+  left: 50px;
+  border-radius: 7px;
+  border: 2px solid #5D00B9;
+  overflow: hidden;
+  /* Asegura que el contenido no sobresalga de los bordes redondeados */
+}
+
+.video-description-card {
+  background: #ddd;
+  /* Puedes ajustar el color de fondo según tus necesidades */
+  padding: 10px;
+  /* Ajusta según tus necesidades de espaciado */
+  border-radius: 5px;
+}
+
+.video-description {
+  /* Estilos para la descripción del video dentro de la tarjeta gris */
+}
 
 
-  .social-icons .social-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.social-icons img {
+  width: 40px;
+  /* Ajusta según tus necesidades de tamaño */
+  height: 40px;
+  /* Ajusta según tus necesidades de tamaño */
+  margin: 0 5px;
+  /* Ajusta según tus necesidades de espaciado */
+  position: relative;
+  /* Posición relativa para los elementos secundarios */
+  cursor: pointer;
+}
 
-  .social-icons .icon-text {
-    font-size: 10px; /* Ajusta según tus necesidades de tamaño de fuente */
-    color: #000; /* Color del texto */
-    margin-top: 5px; /* Ajusta según tus necesidades de espaciado */
-    line-height: 22.4px;
-    font-weight: bold;
-  }
-
-
-
-  
-  .popupcompartir-content {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .popupcompartir-buttons button {
-    background-color: #5D00B9;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .popupcompartir-buttons button:hover {
-    background-color: #4D0089;
-  }
-  
-  .popupcompartir p {
-    margin-bottom: 20px;
-  }
-  
-  .popupcompartir span.closecompartir {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #888;
-    cursor: pointer;
-  }
-  
-  .popupcompartir-buttons {
-    margin-top: 20px;
-  }
-
-  .popupcompartir-buttons button.cancel {
-    background-color: #ffffff;
-    color: #000000;
-    border: 1px solid #000000; /* Borde negro */
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.social-icons img::after {
+  content: attr(data-text);
+  /* Utiliza el contenido del atributo data-text como texto */
+  display: block;
+  /* Hace que el texto sea un bloque separado */
+  text-align: center;
+  /* Centra el texto */
+  margin-top: 5px;
+  /* Ajusta según tus necesidades de espaciado */
+  font-size: 12px;
+  /* Ajusta según tus necesidades de tamaño de fuente */
+  color: #ffffff;
+  /* Color del texto */
+}
 
 
-  .popup.compartirexito {
-    background-color: #F2F2F2;
-    width: auto;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    /*box-shadow: 0 0 1px #CC00FF; */
-    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
-  }
-  
-  .popup.compartirexito .popup-content {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .popup.compartirexito p {
-    margin-bottom: 20px;
-  }
-  
-  .popup.compartirexito .vistobueno {
-    width: 50px; /* Ajusta según tus necesidades */
-    height: 50px; /* Ajusta según tus necesidades */
-    margin-top: 10px;
-  }
+.social-icons .social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .popup.popuperror {
-    background-color: #F2F2F2;
-    width: 369px;
-    height: auto; /* Ajustado a 'auto' para acomodar el contenido variable */
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    /* box-shadow: 0 0 1px #CC00FF; */
-    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
-  }
-  
-  .popup.popuperror .popup-content {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .popup.popuperror p {
-    margin-bottom: 10px;
-  }
-  
-  .popup.popuperror p.error-message {
-    color: #09244B80;
-    text-align: center;
-  }
+.social-icons .icon-text {
+  font-size: 10px;
+  /* Ajusta según tus necesidades de tamaño de fuente */
+  color: #000;
+  /* Color del texto */
+  margin-top: 5px;
+  /* Ajusta según tus necesidades de espaciado */
+  line-height: 22.4px;
+  font-weight: bold;
+}
 
-  .popupcompartir {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    font-weight: bold;
-    transform: translate(-50%, -50%);
-    background-color: #F2F2F2;
-    width: auto;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1); /* Agrega la sombra con blur de 4px y color #CC00FF */
-    z-index: 1000;
-  }
+/* Estilos para el pie de página */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  place-items: center;
+  text-align: center;
+  background-color: white;
+  height: 3.75rem;
+  border-top:1px solid #09244B;
+}
+
+.copyright {
+  width: 100%;
+  color: 1px #09244B;
+}
+
+.copyright p {
+  font-size: 0.875rem;
+}
+
+/* Estilos para las alertas emergentes */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  font-weight: bold;
+  box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
+  z-index: 1;
+}
+
+/* Estilos para el contenido de las alertas emergentes */
+.popup span.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.popup #loginContent {
+  text-align: center;
+}
+
+/* Estilos generales para las alertas */
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: none;
+  z-index: 1000;
+}
+
+/* Estilos para alerta de éxito */
+.alert-success {
+  background-color: #10C200;
+}
+
+/* Estilos para alerta de error */
+.alert-error {
+  background-color: #CC00FF;
+}
+
+.popupcompartir-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.popupcompartir-buttons button {
+  background-color: #5D00B9;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popupcompartir-buttons button:hover {
+  background-color: #4D0089;
+}
+
+.popupcompartir p {
+  margin-bottom: 20px;
+}
+
+.popupcompartir span.closecompartir {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.popupcompartir-buttons {
+  margin-top: 20px;
+}
+
+.popupcompartir-buttons button.cancel {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  /* Borde negro */
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup.compartirexito {
+  background-color: #F2F2F2;
+  width: auto;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /*box-shadow: 0 0 1px #CC00FF; */
+  box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
+}
+
+.popup.compartirexito .popup-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.popup.compartirexito p {
+  margin-bottom: 20px;
+}
+
+.popup.compartirexito .vistobueno {
+  width: 50px;
+  /* Ajusta según tus necesidades */
+  height: 50px;
+  /* Ajusta según tus necesidades */
+  margin-top: 10px;
+}
+
+.popup.popuperror {
+  background-color: #F2F2F2;
+  width: 369px;
+  height: auto;
+  /* Ajustado a 'auto' para acomodar el contenido variable */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* box-shadow: 0 0 1px #CC00FF; */
+  box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
+}
+
+.popup.popuperror .popup-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.popup.popuperror p {
+  margin-bottom: 10px;
+}
+
+.popup.popuperror p.error-message {
+  color: #09244B80;
+  text-align: center;
+}
+
+/* Estilos para el popup de compartir */
+.popupcompartir {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  background-color: #F2F2F2;
+  width: auto;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 15px 10px -5px rgba(247, 0, 255, 0.1);
+  z-index: 1000;
+}
